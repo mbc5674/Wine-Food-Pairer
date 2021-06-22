@@ -1,0 +1,114 @@
+#my{
+    zoom: 90%;
+}
+
+.centered-left {
+    margin-left: 30%;
+}
+
+.btn-primary {
+    background-color: rebeccapurple;
+    font-family: 'Lucida Grande';
+    height: 50px;
+    width: 26.8%;
+    font-size: 25px;
+}
+
+.btn-primary2 {
+    background-color: purple;
+    font-family: 'Lucida Grande';
+    height: 50px;
+    width: 26.8%;
+    font-size: 25px;
+    color: white;
+}
+
+.tab-background {
+    background-color: transparent;
+    width: 90%;
+    height: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-image {
+    content: "";
+    color:black;
+    font-size: 50px;
+    font-family: Impact;
+    font-style: normal;
+    width: 25%;
+    height: 190px;
+    background-color: transparent;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+}
+
+.button-dry-white {
+    background-image: url("Dry-White.png");
+}
+
+.button-sweet-white {
+    background-image: url("Sweet-White.png")
+}
+
+.button-rich-white {
+    background-image: url("Rich-White.png");
+}
+
+.button-sparkling {
+    background-image: url("Sparkling.png");
+}
+
+.button-light-red {
+    background-image: url("Light-Red.png");
+}
+
+.button-medium-red {
+    background-image: url("Medium-Red.png");
+}
+
+.button-bold-red {
+    background-image: url("Bold-Red.png");
+}
+
+.button-dessert {
+    background-image: url("Dessert.png");
+}
+
+.button-veggies {
+    background-image: url("Veggies.png");
+}
+
+.button-roasted-veggies {
+    background-image: url("Roasted-Veggies.png");
+}
+
+.button-soft-cheese {
+    background-image: url("Soft-Cheese.png");
+}
+
+.button-hard-cheese {
+    background-image: url("Hard-Cheese.png");
+}
+
+.button-starches {
+    background-image: url("Starches.png");
+}
+
+.button-fish {
+    background-image: url("Fish.png");
+}
+
+.button-rich-fish {
+    background-image: url("Rich-Fish.png");
+}
+
+.button-white-meat {
+    background-image: url("White-Meat.png");
+}
+
+.button-red-meat {
+    background-image: url("Red-Meat.png");
+}

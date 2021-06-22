@@ -1,0 +1,206 @@
+<p></p>
+<div class="centered-left">
+    <button type="button" class="btn btn-primary" (click)="selectWineTab()" *ngIf="!showWine">Wine</button>
+    <button type="button" class="btn btn-primary2" (click)="selectWineTab()" *ngIf="showWine">Wine</button>
+    <!--
+    &nbsp;
+    <button type="button" class="btn btn-primary" (click)="selectBeerTab()" *ngIf="!showBeer">Beer</button>
+    <button type="button" class="btn btn-primary2" (click)="selectBeerTab()" *ngIf="showBeer">Beer</button>
+    -->
+    &nbsp;
+    <button type="button" class="btn btn-primary" (click)="selectFoodTab()" *ngIf="!showFood">Food</button>
+    <button type="button" class="btn btn-primary2" (click)="selectFoodTab()" *ngIf="showFood">Food</button>
+    <p></p>
+</div>
+
+
+
+<ng-container *ngIf="showWine">
+    <div class="tab-background" *ngIf="showAllWines">
+        <h2>Select a type of wine to see it's pairings</h2>
+        <button type="button" (click)="wineSecondPageToggler(0)" class="btn btn-primary button-image button-dry-white"></button>
+        <button type="button" (click)="wineSecondPageToggler(1)" class="btn btn-primary button-image button-sweet-white"></button>
+        <button type="button" (click)="wineSecondPageToggler(2)" class="btn btn-primary button-image button-rich-white"></button>
+        <button type="button" (click)="wineSecondPageToggler(3)" class="btn btn-primary button-image button-sparkling"></button>
+        <button type="button" (click)="wineSecondPageToggler(4)" class="btn btn-primary button-image button-light-red"></button>
+        <button type="button" (click)="wineSecondPageToggler(5)" class="btn btn-primary button-image button-medium-red"></button>
+        <button type="button" (click)="wineSecondPageToggler(6)" class="btn btn-primary button-image button-bold-red"></button>
+        <button type="button" (click)="wineSecondPageToggler(7)" class="btn btn-primary button-image button-dessert"></button>
+    </div>
+    <div class="tab-background" *ngIf="!showAllWines">
+        <button type="button" (click)="selectWineTab()" class="btn btn-success">Back</button>
+        <div *ngIf="showDryWhite">
+            <h2>Dry whites pair nicely with:</h2>
+            <button type="button" class="btn btn-primary button-image button-veggies"></button>
+            <button type="button" class="btn btn-primary button-image button-roasted-veggies"></button>
+            <button type="button" class="btn btn-primary button-image button-starches"></button>
+            <button type="button" class="btn btn-primary button-image button-fish"></button>
+        </div>
+        <div *ngIf="showSweetWhite">
+            <h2>Sweet whites pair nicely with:</h2>
+            <button type="button" class="btn btn-primary button-image button-soft-cheese"></button>
+            <button type="button" class="btn btn-primary button-image button-hard-cheese"></button>
+            <button type="button" class="btn btn-primary button-image">CURED MEAT</button>
+            <button type="button" class="btn btn-primary button-image">SWEETS</button>
+        </div>
+        <div *ngIf="showRichWhite">
+            <h2>Rich whites pair nicely with:</h2>
+            <button type="button" class="btn btn-primary button-image button-soft-cheese"></button>
+            <button type="button" class="btn btn-primary button-image button-starches"></button>
+            <button type="button" class="btn btn-primary button-image button-fish"></button>
+            <button type="button" class="btn btn-primary button-image button-rich-fish"></button>
+            <button type="button" class="btn btn-primary button-image button-white-meat"></button>
+        </div>
+        <div *ngIf="showSparkling">
+            <h2>Sparkling wines pair nicely with:</h2>
+            <button type="button" class="btn btn-primary button-image button-veggies"></button>
+            <button type="button" class="btn btn-primary button-image button-soft-cheese"></button>
+            <button type="button" class="btn btn-primary button-image button-hard-cheese"></button>
+            <button type="button" class="btn btn-primary button-image button-starches"></button>
+            <button type="button" class="btn btn-primary button-image button-fish"></button>
+        </div>
+        <div *ngIf="showLightRed">
+            <h2>Light reds pair nicely with:</h2>
+            <button type="button" class="btn btn-primary button-image button-roasted-veggies"></button>
+            <button type="button" class="btn btn-primary button-image button-starches"></button>
+            <button type="button" class="btn btn-primary button-image button-rich-fish"></button>
+            <button type="button" class="btn btn-primary button-image button-white-meat"></button>
+            <button type="button" class="btn btn-primary button-image">CURED MEAT</button>
+        </div>
+        <div *ngIf="showMediumRed">
+            <h2>Medium reds pair nicely with:</h2>
+            <button type="button" class="btn btn-primary button-image button-roasted-veggies"></button>
+            <button type="button" class="btn btn-primary button-image button-hard-cheese"></button>
+            <button type="button" class="btn btn-primary button-image button-starches"></button>
+            <button type="button" class="btn btn-primary button-image button-white-meat"></button>
+            <button type="button" class="btn btn-primary button-image button-red-meat"></button>
+            <button type="button" class="btn btn-primary button-image">CURED MEAT</button>
+        </div>
+        <div *ngIf="showBoldRed">
+            <h2>Bold reds pair nicely with:</h2>
+            <button type="button" class="btn btn-primary button-image button-hard-cheese"></button>
+            <button type="button" class="btn btn-primary button-image button-starches"></button>
+            <button type="button" class="btn btn-primary button-image button-red-meat"></button>
+            <button type="button" class="btn btn-primary button-image">CURED MEAT</button>
+        </div>
+        <div *ngIf="showDessert">
+            <h2>Dessert wines pair nicely with:</h2>
+            <button type="button" class="btn btn-primary button-image button-soft-cheese"></button>
+            <button type="button" class="btn btn-primary button-image button-starches"></button>
+            <button type="button" class="btn btn-primary button-image">CURED MEAT</button>
+            <button type="button" class="btn btn-primary button-image">SWEETS</button>
+        </div>
+        <div>
+            <h2>Select one to see suggested recipes</h2>
+        </div>
+    </div>
+</ng-container>
+
+<!--
+<ng-container *ngIf="showBeer">
+    <div class="tab-background">
+        <button type="button" class="btn btn-primary button-image">PALE LAGER</button>
+        <button type="button" class="btn btn-primary button-image">BLONDE ALE</button>
+        <button type="button" class="btn btn-primary button-image">HEFEWEIZEN</button>
+        <button type="button" class="btn btn-primary button-image">PALE ALE/IPA</button>
+        <button type="button" class="btn btn-primary button-image">AMBER ALE</button>
+        <button type="button" class="btn btn-primary button-image">IRISH RED ALE</button>
+        <button type="button" class="btn btn-primary button-image">BROWN ALE</button>
+        <button type="button" class="btn btn-primary button-image">PORTER</button>
+        <button type="button" class="btn btn-primary button-image">STOUT</button>
+    </div>
+</ng-container>
+-->
+
+<ng-container *ngIf="showFood">
+    <div class="tab-background" *ngIf="showAllFood">
+        <h2>Select a food group to see it's pairings</h2>
+        <button type="button" (click)="foodSecondPageToggler(0)" class="btn btn-primary button-image button-veggies"></button>
+        <button type="button" (click)="foodSecondPageToggler(1)" class="btn btn-primary button-image button-roasted-veggies"></button>
+        <button type="button" (click)="foodSecondPageToggler(2)" class="btn btn-primary button-image button-soft-cheese"></button>
+        <button type="button" (click)="foodSecondPageToggler(3)" class="btn btn-primary button-image button-hard-cheese"></button>
+        <button type="button" (click)="foodSecondPageToggler(4)" class="btn btn-primary button-image button-starches"></button>
+        <button type="button" (click)="foodSecondPageToggler(5)" class="btn btn-primary button-image button-fish"></button>
+        <button type="button" (click)="foodSecondPageToggler(6)" class="btn btn-primary button-image button-rich-fish"></button>
+        <button type="button" (click)="foodSecondPageToggler(7)" class="btn btn-primary button-image button-white-meat"></button>
+        <button type="button" (click)="foodSecondPageToggler(8)" class="btn btn-primary button-image button-red-meat"></button>
+        <button type="button" (click)="foodSecondPageToggler(9)" class="btn btn-primary button-image">CURED MEAT</button>
+        <button type="button" (click)="foodSecondPageToggler(10)" class="btn btn-primary button-image">SWEETS</button>
+    </div>
+    <div class="tab-background" *ngIf="!showAllFood">
+        <button type="button" (click)="selectFoodTab()" class="btn btn-success">Back</button>
+        <div *ngIf="showVeggies">
+            <h2>Vegetables pair nicely with:</h2>
+            <button type="button" class="btn btn-primary button-image button-dry-white"></button>
+            <button type="button" class="btn btn-primary button-image button-sparkling"></button>
+        </div>
+        <div *ngIf="showRoastedVeggies">
+            <h2>Roasted vegetables pair nicely with:</h2>
+            <button type="button" class="btn btn-primary button-image button-dry-white"></button>
+            <button type="button" class="btn btn-primary button-image button-light-red"></button>
+            <button type="button" class="btn btn-primary button-image button-medium-red"></button>
+        </div>
+        <div *ngIf="showSoftCheese">
+            <h2>Soft cheeses pair nicely with:</h2>
+            <button type="button" class="btn btn-primary button-image button-sweet-white"></button>
+            <button type="button" class="btn btn-primary button-image button-rich-white"></button>
+            <button type="button" class="btn btn-primary button-image button-sparkling"></button>
+            <button type="button" class="btn btn-primary button-image button-dessert"></button>
+        </div>
+        <div *ngIf="showHardCheese">
+            <h2>Hard cheeses pair nicely with:</h2>
+            <button type="button" class="btn btn-primary button-image button-sweet-white"></button>
+            <button type="button" class="btn btn-primary button-image button-sparkling"></button>
+            <button type="button" class="btn btn-primary button-image button-medium-red"></button>
+            <button type="button" class="btn btn-primary button-image button-bold-red"></button>
+        </div>
+        <div *ngIf="showStarches">
+            <h2>Starches pair nicely with:</h2>
+            <button type="button" class="btn btn-primary button-image button-dry-white"></button>
+            <button type="button" class="btn btn-primary button-image button-rich-white"></button>
+            <button type="button" class="btn btn-primary button-image button-sparkling"></button>
+            <button type="button" class="btn btn-primary button-image button-light-red"></button>
+            <button type="button" class="btn btn-primary button-image button-medium-red"></button>
+            <button type="button" class="btn btn-primary button-image button-bold-red"></button>
+            <button type="button" class="btn btn-primary button-image button-dessert"></button>
+        </div>
+        <div *ngIf="showFish">
+            <h2>Fish pairs nicely with:</h2>
+            <button type="button" class="btn btn-primary button-image button-dry-white"></button>
+            <button type="button" class="btn btn-primary button-image button-rich-white"></button>
+            <button type="button" class="btn btn-primary button-image button-sparkling"></button>
+        </div>
+        <div *ngIf="showRichFish">
+            <h2>Rich fish pairs nicely with:</h2>
+            <button type="button" class="btn btn-primary button-image button-rich-white"></button>
+            <button type="button" class="btn btn-primary button-image button-light-red"></button>
+        </div>
+        <div *ngIf="showWhiteMeat">
+            <h2>White meats pair nicely with:</h2>
+            <button type="button" class="btn btn-primary button-image button-rich-white"></button>
+            <button type="button" class="btn btn-primary button-image button-light-red"></button>
+            <button type="button" class="btn btn-primary button-image button-medium-red"></button>
+        </div>
+        <div *ngIf="showRedMeat">
+            <h2>Red meats pair nicely with:</h2>
+            <button type="button" class="btn btn-primary button-image button-medium-red"></button>
+            <button type="button" class="btn btn-primary button-image button-bold-red"></button>
+        </div>
+        <div *ngIf="showCuredMeat">
+            <h2>Cured meats pair nicely with:</h2>
+            <button type="button" class="btn btn-primary button-image button-sweet-white"></button>
+            <button type="button" class="btn btn-primary button-image button-light-red"></button>
+            <button type="button" class="btn btn-primary button-image button-medium-red"></button>
+            <button type="button" class="btn btn-primary button-image button-bold-red"></button>
+            <button type="button" class="btn btn-primary button-image button-dessert"></button>
+        </div>
+        <div *ngIf="showSweets">
+            <h2>Sweets pair nicely with:</h2>
+            <button type="button" class="btn btn-primary button-image button-sweet-white"></button>
+            <button type="button" class="btn btn-primary button-image button-dessert"></button>
+        </div>
+        <div>
+            <h2>Select one to see suggested vintages</h2>
+        </div>
+    </div>
+</ng-container>
